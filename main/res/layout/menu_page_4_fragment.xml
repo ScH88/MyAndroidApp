@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        style="@style/contentBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/page4TitleHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_4_page_title"
+            android:textSize="@dimen/content_title_size"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/nameHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_4_name_text"
+            android:textSize="@dimen/content_body_font_size"
+            android:layout_below="@+id/page4TitleHead"
+            android:layout_toRightOf="@+id/nameErrorMssg"
+            android:layout_toEndOf="@+id/nameErrorMssg"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/phoneHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/nameErrorMssg"
+            android:layout_marginTop="@dimen/form_margin_vertical"
+            android:text="@string/menu_4_phone_text"
+            android:textSize="@dimen/content_body_font_size" />
+
+        <TextView
+            android:id="@+id/mailHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/phoneErrorMssg"
+            android:layout_marginTop="@dimen/form_margin_vertical"
+            android:text="@string/menu_4_email_text"
+            android:textSize="@dimen/content_body_font_size" />
+
+        <Button
+            android:id="@+id/formButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/mailErrorMssg"
+            android:layout_marginTop="@dimen/form_margin_vertical"
+            android:text="@string/menu_4_button_text"
+            android:textSize="@dimen/content_body_font_size"
+            android:padding="@dimen/button_padding"/>
+
+        <EditText
+            android:id="@+id/nameInput"
+            style="@style/editTextCustom"
+            android:layout_width="match_parent"
+            android:background="@drawable/rounded_corner_edittext"
+            android:inputType="textPersonName"
+            android:text=""
+            android:textSize="@dimen/content_body_font_size"
+            android:layout_alignTop="@+id/nameHead"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/nameHead"
+            android:layout_toEndOf="@+id/nameHead" />
+
+        <EditText
+            android:id="@+id/phoneInput"
+            style="@style/editTextCustom"
+            android:layout_width="match_parent"
+            android:background="@drawable/rounded_corner_edittext"
+            android:inputType="phone"
+            android:textSize="@dimen/content_body_font_size"
+            android:layout_alignTop="@+id/phoneHead"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/phoneHead"
+            android:layout_toEndOf="@+id/phoneHead" />
+
+        <EditText
+            android:id="@+id/mailInput"
+            style="@style/editTextCustom"
+            android:layout_width="match_parent"
+            android:background="@drawable/rounded_corner_edittext"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/content_body_font_size"
+            android:layout_alignTop="@+id/mailHead"
+            android:layout_alignLeft="@+id/nameInput"
+            android:layout_alignStart="@+id/nameInput" />
+
+        <TextView
+            android:id="@+id/nameErrorMssg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/nameHead"
+            android:layout_marginTop="@dimen/form_margin_vertical"
+            android:textColor="@color/red"
+            android:textSize="@dimen/content_body_font_size" />
+
+        <TextView
+            android:id="@+id/phoneErrorMssg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/phoneHead"
+            android:layout_marginTop="@dimen/form_margin_vertical"
+            android:textColor="@color/red"
+            android:textSize="@dimen/content_body_font_size" />
+
+        <TextView
+            android:id="@+id/mailErrorMssg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/mailHead"
+            android:layout_marginTop="@dimen/form_margin_vertical"
+            android:textColor="@color/red"
+            android:textSize="@dimen/content_body_font_size" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<resources>
+
+        <string name = "Anwendungsname"> NavDrawerTutorial </string>
+        <string name = "action_settings"> Einstellungen </string>
+
+        <string name = "navigation_drawer_open"> Navigationsschublade öffnen </string>
+        <string name = "navigation_drawer_close"> Navigationsschublade schließen </string>
+
+        <string name = "main_menu_page_title"> Willkommen in meiner App! </string>
+        <string name = "menu_2_page_title"> Willkommen bei Menü 2 </string>
+        <string name = "menu_3_page_title"> Willkommen bei Menü 3 </string>
+        <string name = "menu_4_page_title"> Ihr Formular </string>
+        <string name = "menu_5_page_title"> Liste der Feiertage </string>
+
+        <string name = "navbar_title"> Inhalt der App </string>
+
+        <string name = "navbar_option_1_title"> Hauptmenü </string>
+        <string name = "navbar_option_2_title"> Menü 2 Seite </string>
+        <string name = "navbar_option_3_title"> Menü 3 Seite </string>
+        <string name = "navbar_option_4_title"> Menü 4 Seite </string>
+        <string name = "navbar_option_5_title"> Menü 5 Seite </string>
+        <string name = "tab_fragment_1"> Seite 1 </string>
+        <string name = "tab_fragment_2"> Seite 2 </string>
+        <string name = "tab_fragment_3"> Seite 3 </string>
+
+        <string name = "main_menu_page_content"> Hallo. Dies hier ist eine Übungs-App, die ich gemacht habe, um Android-App-Entwicklung besser zu verstehen. Es war ein langer, schwieriger Prozess, aber ich habe es endlich geschafft!
+        \n\nDiese Hauptmenüseite ist eine Demonstration, wie ich eine Bildlaufansicht implementieren kann. Darin unterscheidet sich die Verwendung des \'contentBody\' - Stils von einem nicht-scrollbaren Textstil, den ich für eine separate Seite (Seite 3) verwendet habe.
+        \n\nDie zweite Seite ist eine Demonstration, wie ich klickbare Tabs in einer Schubladenlayoutanwendung verwenden kann (wofür diese App standardmäßig erstellt wurde).
+        \n \nDie dritte Seite ist eine Demonstration einer grundlegenden nicht scrollbaren Seite, die nur aus einem Absatz besteht.
+        \n\nIn der vierten Seite habe ich ein Formular eingefügt. Bei der Formularübermittlung wird der Benutzer zu einer Seite umgeleitet, die die eingegebenen Formulareingaben anzeigt, die der Benutzer eingegeben hat. Von dort aus kann der Benutzer entweder zum Formular oder zur Hauptmenüseite zurückkehren.
+            Auf der fünften Seite lese ich aus einer JSON-Datei und gebe sie in Form einer Liste aus (zum Beispiel Feiertage, die ich schamlos für einen fehlgeschlagenen technischen Test für einen Arbeitgeber verwendet habe). Der Benutzer kann eine Taste drücken, um zu einer Seite mit allen Details weiterzuleiten.
+        \n\nDas ist alles, was es zu dieser App gibt. Ich kann möglicherweise weitere hinzufügen, wie die Verwendung von APIs, die Übersetzung von JSON-Textwerten je nach Ursprungsland des Telefons, die Rechtfertigung von Textabschnitten e.t.c. </string>
+        <string name = "menu_3_page_content"> Dies ist ein einfacher Textabsatz für diesen speziellen Menüeintrag. Da dieser Absatz nicht überläuft, ist für diese Seite kein ScrollView erforderlich. </string>
+
+        <string name = "menu_4_name_text"> Name: </string>
+        <string name = "menu_4_phone_text"> Telefon: </string>
+        <string name = "menu_4_email_text"> E-Mail: </string>
+        <string name = "menu_4_button_text"> Formular senden </string>
+        <string name = "form_name_is_empty"> * Der Name ist leer. </string>
+        <string name = "form_name_is_invalid"> * Namenseingabe ist ungültig </string>
+        <string name = "form_phone_is_empty"> * Die Eingabe des Telefons ist leer. </string>
+        <string name = "form_phone_is_invalid"> * Die Eingabe des Telefons ist ungültig. </string>
+        <string name = "form_email_is_empty"> * E-Mail-Eingabe ist leer </string>
+        <string name = "form_email_is_invalid"> * E-Mail-Eingabe ist ungültig </string>
+
+        <string name = "form_submitted_title"> Gesendetes Formular </string>
+
+        <string name = "form_submit_page_message"> Ihr Name ist INSERTNAMEHERE. Ihre Telefonnummer ist INSERTPHONEHERE. Ihre E-Mail-Adresse lautet INSERTEMAILHERE </string>
+        <string name = "submit_another_form"> Ein anderes Formular senden </string>
+
+        <string name = "hol_layout_date_string"> Anfangsdatum: </string>
+        <string name = "full_details_tolist_button"> Zurück zur Liste </string>
+        <string name = "full_details_price_string"> Preis: </string>
+        <string name = "hol_full_details_button"> Vollständige Details </string>
+
+        <string name = "back_to_main_menu"> Zurück zum Hauptmenü </string>
+</resources>

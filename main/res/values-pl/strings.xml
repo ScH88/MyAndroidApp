@@ -1,0 +1,55 @@
+<resources>
+    <string name = "nazwa_aplikacji"> NavDrawerTutorial </string>
+        <string name = "action_settings"> Ustawienia </string>
+
+        <string name = "navigation_drawer_open"> Otwórz szufladę nawigacji </string>
+        <string name = "navigation_drawer_close"> Zamknij szufladę nawigacji </string>
+
+        <string name = "main_menu_page_title"> Witaj w mojej aplikacji! </string>
+        <string name = "menu_2_page_title"> Witaj w Menu 2 </string>
+        <string name = "menu_3_page_title"> Witaj w Menu 3 </string>
+        <string name = "menu_4_page_title"> Twój formularz </string>
+        <string name = "menu_5_page_title"> Lista świąt </string>
+
+        <string name = "navbar_title"> Zawartość aplikacji </string>
+
+        <string name = "navbar_option_1_title"> Menu główne </string>
+        <string name = "navbar_option_2_title"> Menu 2 Strona </string>
+        <string name = "navbar_option_3_title"> Menu 3 Strona </string>
+        <string name = "navbar_option_4_title"> Menu 4 Strona </string>
+        <string name = "navbar_option_5_title"> Menu 5 Strona </string>
+        <string name = "tab_fragment_1"> Strona 1 </string>
+        <string name = "tab_fragment_2"> Page 2 </string>
+        <string name = "tab_fragment_3"> Strona 3 </string>
+
+        <string name = "main_menu_page_content"> Witaj. To jest aplikacja do ćwiczeń, którą wprowadziłem, by lepiej zrozumieć rozwój aplikacji na Androida. To był długi, trudny proces, ale w końcu to zrobiłem!
+    \n\nTa strona Menu głównego jest demonstracją, w jaki sposób mogę zaimplementować widok przewijania. W nim sposób korzystania z stylu \'contentBody\' różni się od nieprzenoszalnego stylu ciała, jaki zrobiłem dla osobnej strony (która jest stroną 3).
+    \n\n Druga strona jest demonstracją tego, w jaki sposób mogę korzystać z klikalnych zakładek w aplikacji do tworzenia szuflad (z której jest domyślnie budowana ta aplikacja).
+    \n\n Trzecia strona jest demonstracją podstawowej strony, której nie można przewijać, składającej się tylko z jednego akapitu.
+    \n\n Czwarta strona to miejsce, w którym umieszczam formularz. Po przesłaniu formularza użytkownik zostanie przekierowany na stronę z wartościami wprowadzonymi do formularza wprowadzonymi przez użytkownika. Z tego miejsca użytkownik może powrócić do formularza lub strony menu głównego.
+    \n\n Piąta strona to miejsce, w którym odczytuję plik JSON i wypisuję go w formie listy (na przykład świąt, które bezwstydnie wykorzystałem jako nieudany test techniczny dla pracodawcy). Użytkownik może nacisnąć przycisk, aby przejść do strony z pełnymi szczegółami.
+    \n\nCo wszystko jest w tej aplikacji. Być może dodaję do tego więcej, na przykład wykorzystanie API, tłumaczenie wartości tekstowych JSON w zależności od kraju pochodzenia telefonu, uzasadnienie paragrafów tekstu e.t.c. </string>
+        <string name = "menu_3_page_content"> Tutaj znajduje się podstawowy akapit tekstowy dla tego konkretnego elementu menu. Ten akapit nie przepełnia się, więc ta strona nie potrzebuje ScrollView. </string>
+
+        <string name = "menu_4_name_text"> Nazwa: </string>
+        <string name = "menu_4_phone_text"> Phone: </string>
+        <string name = "menu_4_email_text"> Email: </string>
+        <string name = "menu_4_button_text"> Prześlij formularz </string>
+        <string name = "form_name_is_empty"> * Nazwa wartości jest pusta </string>
+    <string name = "form_name_is_invalid"> * Wprowadzanie nazwy jest nieprawidłowe </string>
+        <string name = "form_phone_is_empty"> * Wejście telefonu jest puste </string>
+        <string name = "form_phone_is_invalid"> * Wejście telefonu jest nieprawidłowe </string>
+        <string name = "form_email_is_empty"> * Wprowadzanie wiadomości e-mail jest puste </string>
+        <string name = "form_email_is_invalid"> * Dane wejściowe wiadomości e-mail są nieprawidłowe </string>
+        <string name = "form_submitted_title"> Form Submitted! </string>
+
+        <string name = "form_submit_page_message"> Twoje imię i nazwisko to INSERTNAMEHERE. Twój numer telefonu to INSERTPHONEHERE. Twój adres e-mail to INSERTEMAILHERE </string>
+        <string name = "submit_another_form"> Prześlij inny formularz </string>
+
+        <string name = "hol_layout_date_string"> Data początkowa: </string>
+        <string name = "full_details_tolist_button"> Powrót do listy </string>
+        <string name = "full_details_price_string"> Cena: </string>
+        <string name = "hol_full_details_button"> Pełne szczegóły </string>
+
+        <string name = "back_to_main_menu"> Powrót do głównego menu </string>
+</resources>

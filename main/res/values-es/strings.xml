@@ -1,0 +1,55 @@
+<resources>
+    <string name = "app_name"> NavDrawerTutorial </string>
+        <string name = "action_settings"> Configuraciones </string>
+
+        <string name = "navigation_drawer_open"> Abrir el cajón de navegación </string>
+        <string name = "navigation_drawer_close"> Cerrar el cajón de navegación </string>
+
+        <string name = "main_menu_page_title"> ¡Bienvenido a mi aplicación! </string>
+        <string name = "menu_2_page_title"> Bienvenido al Menú 2 </string>
+        <string name = "menu_3_page_title"> Bienvenido al Menú 3 </string>
+        <string name = "menu_4_page_title"> Su forma </string>
+        <string name = "menu_5_page_title"> Lista de vacaciones </string>
+
+        <string name = "navbar_title"> Contenido de la aplicación </string>
+
+        <string name = "navbar_option_1_title"> Menú principal </string>
+        <string name = "navbar_option_2_title"> Menú 2 Página </string>
+        <string name = "navbar_option_3_title"> Menú 3 Página </string>
+        <string name = "navbar_option_4_title"> Menú 4 Página </string>
+        <string name = "navbar_option_5_title"> Menú 5 Página </string>
+        <string name = "tab_fragment_1"> Página 1 </string>
+        <string name = "tab_fragment_2"> Página 2 </string>
+        <string name = "tab_fragment_3"> Página 3 </string>
+
+        <string name = "main_menu_page_content"> Hola. Esta es una aplicación de práctica que he creado para comprender mejor el desarrollo de aplicaciones de Android. Ha sido un proceso largo y difícil, ¡pero finalmente lo hice!
+    \n\nEsta página del Menú principal es una demostración de cómo puedo implementar una vista de desplazamiento. En él, la forma en que utiliza el estilo \'contentBody\' es diferente de un estilo de cuerpo no desplazable que he hecho para una página separada (que es la página 3).
+    \n\nLa segunda página es una demostración de cómo puedo utilizar las pestañas clicables dentro de una aplicación de diseño de cajones (que es la aplicación predeterminada de esta aplicación).
+    \n\nLa tercera página es una demostración de una página básica no desplazable que consta de un solo párrafo.
+    \n\nLa cuarta página es donde puse un formulario. Tras la presentación del formulario, el usuario será redireccionado a una página, que muestra los valores de entrada del formulario que el usuario ha escrito. A partir de ahí, el usuario puede volver al formulario o a la página del menú principal.
+    \n\nLa quinta página es donde leo de un archivo JSON y la imprimo en forma de lista (por ejemplo, días festivos, que utilicé desvergonzadamente para una prueba técnica fallida para un empleador). El usuario puede presionar un botón para redirigir a una página que muestra todos los detalles.
+    \n\nEsto es todo lo que hay para esta aplicación. Posiblemente agregue más a esto, como el uso de API, la traducción de valores de texto JSON según el país de origen del teléfono, la justificación de los párrafos de texto e.t.c. </string>
+        <string name = "menu_3_page_content"> Este es un párrafo de texto básico para este elemento de menú en particular. Este párrafo no se desborda, por lo que esta página no necesita un ScrollView. </string>
+
+        <string name = "menu_4_name_text"> Nombre: </string>
+        <string name = "menu_4_phone_text"> Teléfono: </string>
+        <string name = "menu_4_email_text"> Correo electrónico: </string>
+        <string name = "menu_4_button_text"> Enviar formulario </string>
+        <string name = "form_name_is_empty"> * El valor del nombre está vacío </string>
+        <string name = "form_name_is_invalid"> * La entrada del nombre no es válida </string>
+        <string name = "form_phone_is_empty"> * La entrada del teléfono está vacía </string>
+        <string name = "form_phone_is_invalid"> * La entrada del teléfono no es válida </string>
+        <string name = "form_email_is_empty"> * La entrada de correo electrónico está vacía </string>
+        <string name = "form_email_is_invalid"> * La entrada de correo electrónico no es válida </string>
+
+        <string name = "form_submitted_title"> ¡Formulario enviado! </string>
+
+        <string name = "form_submit_page_message"> Su nombre es INSERTNAMEHERE. Su número de teléfono es INSERTPHONEHERE. Su dirección de correo electrónico es INSERTEMAILHERE </string>
+        <string name = "submit_another_form"> Enviar otro formulario </string>
+        <string name = "hol_layout_date_string"> Fecha de inicio: </string>
+        <string name = "full_details_tolist_button"> Volver a la lista </string>
+        <string name = "full_details_price_string"> Precio: </string>
+        <string name = "hol_full_details_button"> Detalles completos </string>
+
+        <string name = "back_to_main_menu"> Volver al menú principal </string>
+</resources>

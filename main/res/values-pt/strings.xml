@@ -1,0 +1,56 @@
+<resources>
+    <string name = "app_name"> NavDrawerTutorial </string>
+        <string name = "action_settings"> Configurações </string>
+
+        <string name = "navigation_drawer_open"> Abrir a gaveta de navegação </string>
+        <string name = "navigation_drawer_close"> Fechar a gaveta de navegação </string>
+
+        <string name = "main_menu_page_title"> Bem-vindo à minha aplicação! </string>
+        <string name = "menu_2_page_title"> Bem-vindo ao Menu 2 </string>
+        <string name = "menu_3_page_title"> Bem-vindo ao Menu 3 </string>
+        <string name = "menu_4_page_title"> Seu formulário </string>
+        <string name = "menu_5_page_title"> Lista de feriados </string>
+
+        <string name = "navbar_title"> Conteúdo da aplicação </string>
+
+        <string name = "navbar_option_1_title"> Menu principal </string>
+        <string name = "navbar_option_2_title"> Menu 2 Página </string>
+        <string name = "navbar_option_3_title"> Menu 3 Página </string>
+        <string name = "navbar_option_4_title"> Menu 4 Página </string>
+        <string name = "navbar_option_5_title"> Menu 5 Página </string>
+        <string name = "tab_fragment_1"> Página 1 </string>
+        <string name = "tab_fragment_2"> Página 2 </string>
+        <string name = "tab_fragment_3"> Página 3 </string>
+
+        <string name = "main_menu_page_content"> Olá. Este é um aplicativo de prática que eu fiz para entender melhor o desenvolvimento de aplicativos para Android. Foi um processo longo e difícil, mas finalmente o fiz!
+    \n\nEsta página do Menu Principal é uma demonstração sobre como eu posso implementar uma exibição de rolagem. Nele, como ele usa o estilo \'contentBody\' é diferente de um estilo de corpo não rolável que eu fiz para uma página separada (que é a página 3).
+    \n\nA segunda página é uma demonstração de como eu posso utilizar guias clicáveis ​​dentro de um aplicativo de layout de desenho (do qual o aplicativo é construído como padrão).
+    \n\nA terceira página é uma demonstração de uma página básica não rolável que consiste em apenas um parágrafo.
+    \n\nA quarta página é onde eu coloco um formulário. Após a submissão do formulário, o usuário será redirecionado para uma página, mostrando os valores de entrada do formulário que o usuário digitou. A partir daí, o usuário pode retornar ao formulário ou à página do menu principal.
+    \n\nA quinta página é onde eu li a partir de um arquivo JSON e saída na forma de uma lista (por exemplo feriados, que eu usei desavergonhadamente para um teste técnico falhado para um empregador). O usuário pode pressionar um botão para redirecionar para uma página mostrando detalhes completos.
+    \n\nEste é tudo que existe nessa aplicação. Posso adicionar mais a isso, como o uso de APIs, traduzindo valores de texto JSON, dependendo do país de origem do telefone, justificando os parágrafos de texto e.t.c. </string>
+        <string name = "menu_3_page_content"> Este é um parágrafo de texto básico para este item de menu específico. Este parágrafo não transborda, então esta página não precisa de um ScrollView. </string>
+
+        <string name = "menu_4_name_text"> Nome: </string>
+        <string name = "menu_4_phone_text"> Telefone: </string>
+        <string name = "menu_4_email_text"> Email: </string>
+        <string name = "menu_4_button_text"> Enviar formulário </string>
+        <string name = "form_name_is_empty"> * O valor do nome está vazio </string>
+        <string name = "form_name_is_invalid"> * A entrada do nome é inválida </string>
+        <string name = "form_phone_is_empty"> * A entrada do telefone está vazia </string>
+        <string name = "form_phone_is_invalid"> * A entrada do telefone é inválida </string>
+        <string name = "form_email_is_empty"> * A entrada do email está vazia </string>
+        <string name = "form_email_is_invalid"> * A entrada de e-mail é inválida </string>
+
+        <string name = "form_submitted_title"> Formulário Enviado! </string>
+
+        <string name = "form_submit_page_message"> Seu nome é INSERTNAMEHERE. O seu número de telefone é INSERTPHONEHERE. Seu endereço de e-mail é INSERTEMAILHERE </string>
+        <string name = "submit_another_form"> Enviar outro formulário </string>
+
+        <string name = "hol_layout_date_string"> Data de Início: </string>
+        <string name = "full_details_tolist_button"> Voltar à lista </string>​
+        <string name = "full_details_price_string"> Preço: </string>
+        <string name = "hol_full_details_button"> Detalhes completos </string>
+
+        <string name = "back_to_main_menu"> Voltar ao menu principal </string>
+</resources>

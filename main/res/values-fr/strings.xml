@@ -1,0 +1,56 @@
+<resources>
+    <string name = "app_name"> NavDrawerTutorial </string>
+        <string name = "action_settings"> Paramètres </string>
+
+        <string name = "navigation_drawer_open"> Ouvrir le tiroir de navigation </string>
+        <string name = "navigation_drawer_close"> Fermer le tiroir de navigation </string>
+
+        <string name = "main_menu_page_title"> Bienvenue dans mon application! </string>
+        <string name = "menu_2_page_title"> Bienvenue dans le menu 2 </string>
+        <string name = "menu_3_page_title"> Bienvenue dans le menu 3 </string>
+        <string name = "menu_4_page_title"> Votre formulaire </string>
+        <string name = "menu_5_page_title"> Liste des jours fériés </string>
+
+        <string name = "navbar_title"> Contenu de l\'application </string>
+
+        <string name = "navbar_option_1_title"> Menu principal </string>
+        <string name = "navbar_option_2_title"> Menu 2 Page </string>
+        <string name = "navbar_option_3_title"> Menu 3 Page </string>
+        <string name = "navbar_option_4_title"> Menu 4 Page </string>
+        <string name = "navbar_option_5_title"> Menu 5 Page </string>
+        <string name = "tab_fragment_1"> Page 1 </string>
+        <string name = "tab_fragment_2"> Page 2 </string>
+        <string name = "tab_fragment_3"> Page 3 </string>
+
+        <string name = "main_menu_page_content"> Bonjour. Ceci est une application de pratique que j\'ai faite pour mieux comprendre le développement d\'applications Android. Ce fut un processus long et difficile, mais je l\'ai finalement fait!
+    \n\nCette page du menu principal est une démonstration de la façon dont je peux implémenter une vue défilante. Dans celui-ci, la façon dont il utilise le style \'contentBody\' est différent d\'un style de corps non-scrollable que j\'ai fait pour une page séparée (c\'est à dire la page 3).
+    \n\nLa deuxième page est une démonstration de la façon dont je peux utiliser les onglets cliquables dans une application de mise en page de tiroir (à partir de laquelle cette application est créée par défaut).
+    \n\nLa troisième page est une démonstration d\'une page de base non-défilable composée d\'un seul paragraphe.
+    \n\nLa quatrième page est l\'endroit où je mets un formulaire. Lors de la soumission du formulaire, l\'utilisateur sera redirigé vers une page, montrant les valeurs d\'entrée du formulaire que l\'utilisateur a saisies. De là, l\'utilisateur peut soit revenir au formulaire ou à la page du menu principal.
+    \n\nLa cinquième page est celle où je lis à partir d\'un fichier JSON et la sortie sous la forme d\'une liste (par exemple les vacances, que j\'ai utilisé sans vergogne pour un test technique échoué pour un employeur). L\'utilisateur peut appuyer sur un bouton pour rediriger vers une page affichant tous les détails.
+    \n\nC\'est tout ce qu\'il y a à cette application. J\'ajouterai peut-être plus à cela, comme l\'utilisation d\'API, traduisant des valeurs de texte JSON en fonction du pays d\'origine du téléphone, justifiant les paragraphes de texte e.t.c. </string>
+        <string name = "menu_3_page_content"> Ceci est un paragraphe de texte de base pour cet élément de menu particulier. Ce paragraphe ne déborde pas, donc cette page n\'a pas besoin d\'un ScrollView. </string>
+
+        <string name = "menu_4_name_text"> Nom: </string>
+        <string name = "menu_4_phone_text"> Téléphone: </string>
+        <string name = "menu_4_email_text"> Email: </string>
+        <string name = "menu_4_button_text"> Envoyer le formulaire </string>
+        <string name = "form_name_is_empty"> * La valeur du nom est vide </string>
+        <string name = "nom_formulaire_is_invalid"> * La saisie du nom est invalide </string>
+        <string name = "form_phone_is_empty"> * L\'entrée du téléphone est vide </string>
+        <string name = "form_phone_is_invalid"> * L\'entrée du téléphone est invalide </string>
+        <string name = "form_email_is_empty"> * L\'entrée email est vide </string>
+        <string name = "form_email_is_invalid"> * L\'adresse email est invalide </string>
+
+        <string name = "form_submitted_title"> Formulaire soumis! </string>
+
+        <string name = "form_submit_page_message"> Votre nom est INSERTNAMEHERE. Votre numéro de téléphone est INSERTPHONEHERE. Votre adresse e-mail est INSERTEMAILHERE </string>
+        <string name = "submit_another_form"> Soumettre un autre formulaire </string>
+
+        <string name = "hol_layout_date_string"> Date de début: </string>
+        <string name = "full_details_tolist_button"> Retour à la liste </string>
+        <string name = "full_details_price_string"> Prix: </string>
+        <string name = "hol_full_details_button"> Détails complets </string>
+
+        <string name = "back_to_main_menu"> Retour au menu principal </string>
+</resources>

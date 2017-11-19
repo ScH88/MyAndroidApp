@@ -1,0 +1,56 @@
+<resources>
+    <string name = "nome_app"> NavDrawerTutorial </string>
+        <string name = "action_settings"> Impostazioni </string>
+
+        <string name = "navigation_drawer_open"> Apri cassetto di navigazione </string>
+        <string name = "navigation_drawer_close"> Chiudi carrello di navigazione </string>
+
+        <string name = "main_menu_page_title"> Benvenuto nella mia app! </string>
+        <string name = "menu_2_page_title"> Benvenuto nel Menu 2 </string>
+        <string name = "menu_3_page_title"> Benvenuto nel Menu 3 </string>
+        <string name = "menu_4_page_title"> Il tuo modulo </string>
+        <string name = "menu_5_page_title"> Elenco delle festività </string>
+
+        <string name = "navbar_title"> Contenuti dell\'app </string>
+
+        <string name = "navbar_option_1_title"> Menu principale </string>
+        <string name = "navbar_option_2_title"> Menu 2 Pagina </string>
+        <string name = "navbar_option_3_title"> Menu 3 Page </string>
+        <string name = "navbar_option_4_title"> Menu 4 Page </string>
+        <string name = "navbar_option_5_title"> Menu 5 Page </string>
+        <string name = "tab_fragment_1"> Pagina 1 </string>
+        <string name = "tab_fragment_2"> Pagina 2 </string>
+        <string name = "tab_fragment_3"> Pagina 3 </string>
+
+        <string name = "main_menu_page_content"> Ciao lì. Questa è un\'app di pratica che ho fatto per capire meglio lo sviluppo di app per Android. È stato un processo lungo e difficile, ma finalmente l\'ho fatto!
+    \n\nQuesta pagina del menu principale è una dimostrazione su come posso implementare una vista a scorrimento. In esso, il modo in cui usa lo stile \'contentBody\' è diverso da uno stile del corpo non scorrevole per una pagina separata (che è la pagina 3).
+    \n\nLa seconda pagina è una dimostrazione di come posso utilizzare le schede cliccabili all\'interno di un\'applicazione di layout del cassetto (che è l\'impostazione predefinita di questa app).
+    \n\nLa terza pagina è una dimostrazione di una pagina di base non scorrevole che consiste in un solo paragrafo.
+    \n\nLa quarta pagina è dove ho inserito un modulo. Dopo l\'invio del modulo, l\'utente verrà reindirizzato a una pagina, mostrando i valori di input del modulo che l\'utente ha digitato. Da lì, l\'utente può tornare al modulo o alla pagina del menu principale.
+    \n\nLa quinta pagina è dove ho letto da un file JSON e ho prodotto un elenco sotto forma di elenco (ad esempio le vacanze, che ho usato spudoratamente per un test tecnico fallito per un datore di lavoro). L\'utente può premere un pulsante per reindirizzare a una pagina che mostra tutti i dettagli.
+    \n\nQuesto è tutto ciò che c\'è da fare per questa app. Potrei aggiungere altro a questo, come l\'uso di API, la traduzione di valori di testo JSON a seconda del paese di origine del telefono, giustificando i paragrafi di testo e.t.c. </string>
+        <string name = "menu_3_page_content"> Questo è un paragrafo di testo di base per questa particolare voce di menu. Questo paragrafo non ha overflow, quindi questa pagina non ha bisogno di una ScrollView. </string>
+
+        <string name = "menu_4_name_text"> Nome: </string>
+        <string name = "menu_4_phone_text"> Telefono: </string>
+        <string name = "menu_4_email_text"> Email: </string>
+        <string name = "menu_4_button_text"> Invia modulo </string>
+        <string name = "form_name_is_empty"> * Il valore del nome è vuoto </string>
+        <string name = "form_name_is_invalid"> * Il nome inserito non è valido </string>
+        <string name = "form_phone_is_empty"> * L\'input telefonico è vuoto </string>
+        <string name = "form_phone_is_invalid"> * L\'input del telefono non è valido </string>
+        <string name = "form_email_is_empty"> * L\'input email è vuoto </string>
+        <string name = "form_email_is_invalid"> * L\'input email non è valido </string>
+
+        <string name = "form_submitted_title"> Modulo inviato! </string>
+
+        <string name = "form_submit_page_message"> Il tuo nome è INSERTNAMEHERE. Il tuo numero di telefono è INSERTPHONEHERE. Il tuo indirizzo email è INSERTEMAILHERE </string>
+        <string name = "submit_another_form"> Invia un altro modulo </string>
+
+        <string name = "hol_layout_date_string"> Data di inizio: </string>
+        <string name = "full_details_tolist_button"> Torna all\'elenco </string>
+        <string name = "full_details_price_string"> Prezzo: </string>
+        <string name = "hol_full_details_button"> Dettagli completi </string>
+
+        <string name = "back_to_main_menu"> Torna al menu principale </string>
+</resources>

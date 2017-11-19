@@ -1,0 +1,62 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/headerGrey</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Custom Styles Here -->
+
+    <!-- Style for custom font for popup menu items -->
+    <style name="MenuItemCustomFont" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/menu_text_size</item>
+    </style>
+    <!-- Style for a translucent gray coloured body to differentiate the text from the background image -->
+    <style name="contentBody">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/content_margin</item>
+        <item name="android:padding">@dimen/content_padding</item>
+        <item name="android:background">@color/fadedGreyForContent</item>
+    </style>
+    <!-- Style for a translucent gray body like the one above, but for tabbed pages.
+    The difference is that the top margin is increased to prevent the tabs from overlapping the title -->
+    <style name="contentBodyForTabs">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/content_body_tabs_upper_margin</item>
+        <item name="android:layout_marginLeft">@dimen/content_margin</item>
+        <item name="android:layout_marginRight">@dimen/content_margin</item>
+        <item name="android:layout_marginBottom">@dimen/content_margin</item>
+        <item name="android:padding">@dimen/content_padding</item>
+        <item name="android:background">@color/fadedGreyForContent</item>
+    </style>
+    <!--Style for a translucent gray body for tabbed pages like the one above, but for landscaped pages -->
+    <style name="contentBodyForTabsLandscape">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/content_body_tabs_upper_margin_for_landscape</item>
+        <item name="android:layout_marginLeft">@dimen/content_margin</item>
+        <item name="android:layout_marginRight">@dimen/content_margin</item>
+        <item name="android:layout_marginBottom">@dimen/content_margin</item>
+        <item name="android:padding">@dimen/content_padding</item>
+        <item name="android:background">@color/fadedGreyForContent</item>
+    </style>
+    <!--Style for custom EditText objects -->
+    <style name="editTextCustom" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:textSize">@dimen/content_body_font_size</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_height">@dimen/edittext_height</item>
+    </style>
+
+
+</resources>

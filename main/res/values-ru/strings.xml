@@ -1,0 +1,56 @@
+<resources>
+    <string name = "app_name"> NavDrawerTutorial </string>
+        <string name = "action_settings"> Настройки </string>
+
+        <string name = "navigation_drawer_open"> Открыть ящик перемещения </string>
+        <string name = "navigation_drawer_close"> Закрыть навигационный ящик </string>
+
+        <string name = "main_menu_page_title"> Добро пожаловать в мое приложение! </string>
+        <string name = "menu_2_page_title"> Добро пожаловать в Меню 2 </string>
+        <string name = "menu_3_page_title"> Добро пожаловать в Меню 3 </string>
+        <string name = "menu_4_page_title"> Ваша форма </string>
+        <string name = "menu_5_page_title"> Список праздников </string>
+
+        <string name = "navbar_title"> Содержимое приложения </string>
+
+        <string name = "navbar_option_1_title"> Главное меню </string>
+        <string name = "navbar_option_2_title"> Меню 2 Страница </string>
+        <string name = "navbar_option_3_title"> Меню 3 Страница </string>
+        <string name = "navbar_option_4_title"> Меню 4 Страница </string>
+        <string name = "navbar_option_5_title"> Меню 5 Страница </string>
+        <string name = "tab_fragment_1"> Страница 1 </string>
+        <string name = "tab_fragment_2"> Страница 2 </string>
+        <string name = "tab_fragment_3"> Page 3 </string>
+
+        <string name = "main_menu_page_content"> Привет. Это приложение для практики, которое я сделал, чтобы лучше понять разработку приложений для Android. Это был долгий, трудный процесс, но я, наконец, сделал это!
+    \n\ nЭта страница главного меню представляет собой демонстрацию того, как я могу реализовать прокрутку. В нем, как он использует стиль contentBody \, отличается от стиля без прокрутки, который я сделал для отдельной страницы (это страница 3).
+    \n\nНа второй странице показана демонстрация того, как я могу использовать интерактивные вкладки внутри приложения макета лотка (из чего это приложение построено по умолчанию).
+    \n\nНа третьей странице показана демонстрация базовой страницы без прокрутки, состоящей только из одного абзаца.
+    \n\nНа четвертой странице я помещаю форму. После отправки формы пользователь будет перенаправлен на страницу, указав введенные пользователем данные формы, после чего пользователь может вернуться в форму или на страницу главного меню.
+    \n\nНа пятой странице читается файл JSON и выводятся в виде списка (например, праздники, которые я бесстыдно использовал для неудавшегося технического теста для работодателя). Пользователь может нажать кнопку, чтобы перенаправить на страницу с подробной информацией.
+    \n\nЭто все, что есть в этом приложении. Я могу добавить к этому больше, например, использование API, перевод текстовых значений JSON в зависимости от страны происхождения телефона, обоснование текстовых абзацев e.t.c. </string>
+        <string name = "menu_3_page_content"> Это базовый текстовый абзац для данного пункта меню. Этот абзац не переполняется, поэтому этой странице не требуется ScrollView. </string>
+
+        <string name = "menu_4_name_text"> Имя: </string>
+        <string name = "menu_4_phone_text"> Телефон: </string>
+        <string name = "menu_4_email_text"> Электронная почта: </string>
+        <string name = "menu_4_button_text"> Отправить форму </string>
+        <string name = "form_name_is_empty"> * Значение имени пуст </string>
+        <string name = "form_name_is_invalid"> * Недопустимый ввод имени </string>
+        <string name = "form_phone_is_empty"> * Ввод телефона пуст </string>
+        <string name = "form_phone_is_invalid"> * Недопустимый телефонный ввод </string>
+        <string name = "form_email_is_empty"> * Ввод электронной почты пуст </string>
+        <string name = "form_email_is_invalid"> * Неверный ввод электронной почты </string>
+
+        <string name = "form_submitted_title"> Форма отправлена! </string>
+
+        <string name = "form_submit_page_message"> Ваше имя INSERTNAMEHERE. Ваш номер телефона INSERTPHONEHERE. Ваш адрес электронной почты INSERTEMAILHERE </string>
+        <string name = "submit_another_form"> Отправить другую форму </string>
+
+        <string name = "hol_layout_date_string"> Дата начала: </string>
+        <string name = "full_details_tolist_button"> Вернуться к списку </string>
+        <string name = "full_details_price_string"> Цена: </string>
+        <string name = "hol_full_details_button"> Подробные сведения </string>
+
+        <string name = "back_to_main_menu"> Вернуться в главное меню </string>
+</resources>

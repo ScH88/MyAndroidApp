@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name"> NavDrawerTutorial </string>
+        <string name ="action_settings">设置</string>
+
+        <string name ="navigation_drawer_open">打开抽屉式导航</string>
+        <string name ="navigation_drawer_close">关闭抽屉式导航</string>
+
+        <string name ="main_menu_page_title">欢迎使用我的应用程序！</string>
+        <string name ="menu_2_page_title">欢迎使用菜单2 </string>
+        <string name ="menu_3_page_title">欢迎使用菜单3 </string>
+        <string name ="menu_4_page_title">您的表格</string>
+        <string name ="menu_5_page_title">假期列表</string>
+
+        <string name ="navbar_title"> App Contents </string>
+
+        <string name ="navbar_option_1_title">主菜单</string>
+        <string name ="navbar_option_2_title">菜单2页</string>
+        <string name ="navbar_option_3_title">菜单3页</string>
+        <string name ="navbar_option_4_title">菜单4页</string>
+        <string name ="navbar_option_5_title">菜单5页</string>
+        <string name ="tab_fragment_1"> Page 1 </string>
+        <string name ="tab_fragment_2"> Page 2 </string>
+        <string name ="tab_fragment_3"> </string>
+
+        <string name ="main_menu_page_content">你好。这里是一个练习应用程序，我已经做了更好的理解Android应用程序开发。这是一个漫长而艰难的过程，但我终于做到了！
+        \n\n此主菜单页面是关于如何实现滚动视图的演示。其中，它如何使用\'contentBody\'风格与我为单独页面（即第3页）所做的不可滚动的主体风格不同。
+        \n\n第二页是演示如何利用抽屉布局应用程序中的可点击标签（这是默认构建的应用程序）。
+        \n\n第三页是仅包含一个段落的基本不可滚动页面的演示。
+        \n\n第四页是我放置表格的地方。表单提交后，用户将被重定向到一个页面，显示用户输入的表单输入值。用户可以从这里返回到表单或主菜单页面。
+        \n\n第五页是我从JSON文件中读取并以列表的形式输出（例如节假日，我无耻地用于雇主的失败技术测试）。用户可以按下一个按钮重定向到一个显示详细信息的页面。
+        \n\n这是所有这个应用程序。我可能会添加更多，如API的使用，根据手机的原籍国翻译JSON文本值，证明文本段落e.t.c。 </string>
+        <string name ="menu_3_page_content">这是这个特定菜单项的基本文本段落。这段不会溢出，所以这个页面不需要ScrollView。</string>
+
+        <string name ="menu_4_name_text">名称：</string>
+        <string name ="menu_4_phone_text">电话：</string>
+        <string name ="menu_4_email_text">电子邮件地址：</string>
+        <string name ="menu_4_button_text">提交表单</string>
+        <string name ="form_name_is_empty"> *名称值为空</string>
+        <string name ="form_name_is_invalid"> *名称输入无效</string>
+        <string name ="form_phone_is_empty"> *手机输入为空</string>
+        <string name ="form_phone_is_invalid"> *手机输入无效</string>
+        <string name ="form_email_is_empty"> *电子邮件输入为空</string>
+        <string name ="form_email_is_invalid"> *电子邮件输入无效</string>
+
+        <string name ="form_submitted_title">表单已提交！</string>
+
+        <string name ="form_submit_page_message">你的名字是INSERTNAMEHERE。你的电话号码是INSERTPHONEHERE。您的电子邮件地址是INSERTEMAILHERE </string>
+        <string name ="submit_another_form">提交另一个表单</string>
+
+        <string name ="hol_layout_date_string">开始日期：</string>
+        <string name ="full_details_tolist_button">返回列表</string>
+        <string name ="full_details_price_string">价格：</string>
+        <string name ="hol_full_details_button">完整详细信息</string>
+
+        <string name ="back_to_main_menu">返回主菜单</string>
+</resources>

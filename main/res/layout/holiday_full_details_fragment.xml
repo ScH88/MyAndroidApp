@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        style="@style/contentBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/fd_hotelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textSize="@dimen/content_title_size"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/fd_cityCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_below="@+id/fd_hotelName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <TextView
+                android:id="@+id/fd_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fd_hotelName"
+                android:layout_toLeftOf="@+id/fd_cityCountrySeparate"
+                android:layout_toStartOf="@+id/fd_cityCountrySeparate"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/fd_cityCountrySeparate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fd_hotelName"
+                android:layout_centerHorizontal="true"
+                android:text=" , "/>
+
+            <TextView
+                android:id="@+id/fd_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fd_hotelName"
+                android:layout_toEndOf="@+id/fd_cityCountrySeparate"
+                android:layout_toRightOf="@+id/fd_cityCountrySeparate"
+                android:text="" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fd_fullDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fd_cityCountry"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+            <TextView
+                android:id="@+id/fd_dateString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginRight="5dp"
+                android:text="@string/hol_layout_date_string"
+                android:textSize="@dimen/content_body_font_size"/>
+
+            <TextView
+                android:id="@+id/fd_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/fd_dateString"
+                android:layout_toEndOf="@+id/fd_dateString"
+                android:layout_toRightOf="@+id/fd_dateString"
+                android:layout_marginRight="2dp"
+                android:text=""
+                android:textSize="@dimen/content_body_font_size"/>
+
+            <TextView
+                android:id="@+id/fd_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/fd_day"
+                android:layout_toEndOf="@+id/fd_day"
+                android:layout_toRightOf="@+id/fd_day"
+                android:text=""
+                android:layout_marginRight="2dp"
+                android:textSize="@dimen/content_body_font_size"
+                />
+
+            <TextView
+                android:id="@+id/fd_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/fd_month"
+                android:layout_toEndOf="@+id/fd_month"
+                android:layout_toRightOf="@+id/fd_month"
+                android:text=""
+                android:textSize="@dimen/content_body_font_size"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/fd_priceString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/fd_fullDate"
+            android:text="@string/full_details_price_string"
+            android:textSize="@dimen/content_body_font_size"/>
+
+        <TextView
+            android:id="@+id/fd_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fd_fullDate"
+            android:layout_toEndOf="@+id/fd_priceString"
+            android:layout_toRightOf="@+id/fd_priceString"
+            android:textStyle="bold"
+            android:text=""
+            android:textSize="@dimen/content_body_font_size"/>
+        <ImageView
+            android:id="@+id/fd_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/fd_price"
+            android:layout_marginTop="@dimen/content_margin"
+            app:srcCompat="@android:color/holo_blue_bright" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fd_image"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text=""
+            android:id="@+id/fd_details"
+            android:textSize="@dimen/content_body_font_size"/>
+
+        <Button
+            android:id="@+id/fd_back_to_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/full_details_tolist_button"
+            android:layout_below="@+id/fd_details"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textSize="@dimen/content_body_font_size"/>
+
+        <Button
+            android:id="@+id/fd_to_main_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/back_to_main_menu"
+            android:layout_below="@+id/fd_back_to_list"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textSize="@dimen/content_body_font_size"/>
+    </RelativeLayout>
+    </ScrollView>

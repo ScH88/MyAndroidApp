@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        style="@style/contentBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/form_submitted_title"
+            android:textSize="@dimen/content_title_size_for_landscape"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/form_submit_textmessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_margin_vertical"
+            android:text=""
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/content_body_font_size_for_landscape"/>
+
+        <Button
+            android:id="@+id/back_to_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/form_margin_vertical_for_landscape"
+            android:layout_below="@+id/form_submit_textmessage"
+            android:text="@string/submit_another_form"
+            android:textSize="@dimen/content_body_font_size_for_landscape"/>
+
+        <Button
+            android:id="@+id/to_main_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/back_to_form"
+            android:layout_marginTop="@dimen/form_margin_vertical_for_landscape"
+            android:text="@string/back_to_main_menu"
+            android:textSize="@dimen/content_body_font_size_for_landscape"/>
+
+    </RelativeLayout>
+</LinearLayout>

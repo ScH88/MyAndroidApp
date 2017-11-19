@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">NavDrawerTutorial</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="main_menu_page_title">Welcome To My App!</string>
+    <string name="menu_2_page_title">Welcome to Menu 2</string>
+    <string name="menu_3_page_title">Welcome to Menu 3</string>
+    <string name="menu_4_page_title">Your Form </string>
+    <string name="menu_5_page_title">List Of Holidays</string>
+
+    <string name="navbar_title">App Contents</string>
+
+    <string name="navbar_option_1_title">Main Menu</string>
+    <string name="navbar_option_2_title">Menu 2 Page</string>
+    <string name="navbar_option_3_title">Menu 3 Page</string>
+    <string name="navbar_option_4_title">Menu 4 Page</string>
+    <string name="navbar_option_5_title">Menu 5 Page</string>
+    <string name="tab_fragment_1">Page 1</string>
+    <string name="tab_fragment_2">Page 2</string>
+    <string name="tab_fragment_3">Page 3</string>
+
+    <string name="main_menu_page_content">Hello there. This here is a practice app I have made to better understand Android app development. It has been a long, difficult process, but I have finally did it!
+    \n\nThis Main Menu page is a demonstration on how I can implement a scroll view. In it, how it uses the \'contentBody\' style is different from a non-scrollable body style I have done for a separate page (that being page 3).
+    \n\nThe second page is a demonstration of how I can utilise clickable tabs inside a drawer layout application (which is what this app is built from as a default).
+    \n\nThe third page is a demonstration of a basic non-scrollable page consisting of only one paragraph.
+    \n\nThe fourth page is where I put a form. Upon form submission, the user will be redirected to a page, showing the form input values that the user has typed in. From there, the user can either go back to the form or to the main menu page.
+        \n\nThe fifth page is where I read from a JSON file and output in the form of a list (for example holidays, which I shamelessly used for a failed technical test for an employer). The user can press a button to redirect to a page showing full details.
+    \n\nThat is all there is to this app. I may possibly add more to this, such as usage of APIs, translating JSON text values depending on the phone\'s country of origin, justifying text paragraphs e.t.c. </string>
+    <string name="menu_3_page_content">This here is a basic text paragraph for this particular menu item. This paragraph does not overflow, so this page does not need a ScrollView.</string>
+
+    <string name="menu_4_name_text">Name:</string>
+    <string name="menu_4_phone_text">Phone:</string>
+    <string name="menu_4_email_text">Email:</string>
+    <string name="menu_4_button_text">Submit Form</string>
+    <string name="form_name_is_empty">*Name value is empty</string>
+    <string name="form_name_is_invalid">*Name input is invalid</string>
+    <string name="form_phone_is_empty">*Phone input is empty</string>
+    <string name="form_phone_is_invalid">*Phone input is invalid</string>
+    <string name="form_email_is_empty">*Email input is empty</string>
+    <string name="form_email_is_invalid">*Email input is invalid</string>
+
+    <string name="form_submitted_title">Form Submitted!</string>
+
+    <string name="form_submit_page_message">Your name is INSERTNAMEHERE. Your phone number is INSERTPHONEHERE. Your email address is INSERTEMAILHERE</string>
+    <string name="submit_another_form">Submit Another Form</string>
+
+    <string name="hol_layout_date_string">Starting Date:</string>
+    <string name="full_details_tolist_button">Back To List</string>
+    <string name="full_details_price_string">Price:</string>
+    <string name="hol_full_details_button">Full Details</string>
+
+    <string name="back_to_main_menu">Back To Main Menu</string>
+</resources>

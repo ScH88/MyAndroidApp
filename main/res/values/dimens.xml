@@ -1,0 +1,32 @@
+<resources>
+    <!-- Dimensions for activity -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Dimensions for menu and navigation -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="menu_text_size">22sp</dimen>
+    <dimen name="nav_header_title_font_size">29sp</dimen>
+    <dimen name="nav_header_margin">18dp</dimen>
+    <dimen name="menu_item_padding">20dp</dimen>
+
+    <!-- Dimensions for content -->
+    <dimen name="content_margin">20dp</dimen>
+    <dimen name="content_title_size">30sp</dimen>
+    <dimen name="content_title_size_for_landscape">36sp</dimen>
+    <dimen name="content_body_font_size">16sp</dimen>
+    <dimen name="content_body_font_size_for_landscape">20sp</dimen>
+    <dimen name="content_padding">15dp</dimen>
+    <dimen name="content_body_tabs_upper_margin">70dp</dimen>
+    <dimen name="content_body_tabs_upper_margin_for_landscape">90dp</dimen>
+
+    <!-- Dimensions for buttons -->
+    <dimen name="button_padding">5dp</dimen>
+
+    <!--Dimensions for forms -->
+    <dimen name="form_margin_vertical">20dp</dimen>
+    <dimen name="form_margin_vertical_for_landscape">5dp</dimen>
+    <dimen name="form_margin_horizontal">8dp</dimen>
+    <dimen name="edittext_height">30dp</dimen>
+</resources>

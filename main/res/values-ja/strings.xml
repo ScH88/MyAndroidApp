@@ -1,0 +1,56 @@
+<resources>
+    <string name = "app_name"> NavDrawerTutorial </string>
+        <string name = "action_settings">設定</string>
+
+        <string name = "navigation_drawer_open">ナビゲーション・ドロワーを開く</string>
+        <string name = "navigation_drawer_close">ナビゲーション・ドロワーを閉じる</string>
+
+        <string name = "main_menu_page_title"> My Appへようこそ！</string>
+        <string name = "menu_2_page_title">メニュー2へようこそ。</string>
+        <string name = "menu_3_page_title">メニュー3へようこそ。</string>
+        <string name = "menu_4_page_title">フォーム</string>
+        <string name = "menu_5_page_title">祝日一覧</string>
+
+        <string name = "navbar_title">アプリケーションの内容</string>
+
+        <string name = "navbar_option_1_title">メインメニュー</string>
+        <string name = "navbar_option_2_title">メニュー2ページ</string>
+        <string name = "navbar_option_3_title">メニュー3ページ</string>
+        <string name = "navbar_option_4_title">メニュー4ページ</string>
+        <string name = "navbar_option_5_title">メニュー5ページ</string>
+        <string name = "tab_fragment_1"> Page 1 </string>
+        <string name = "tab_fragment_2"> Page 2 </string>
+        <string name = "tab_fragment_3"> Page 3 </string>
+
+        <string name = "main_menu_page_content">こんにちは。これは私がAndroidアプリの開発をよりよく理解するために作った練習アプリです。それは長い、困難なプロセスでしたが、私はついにそれをしました！
+    \n\nこのメインメニューページは、スクロール表示の実装方法に関するデモンストレーションです。その中で、\'contentBody\'スタイルを使う方法は、別のページ（3ページ目）で行った非スクロール可能なボディスタイルとは異なります。
+    \n\n第2ページは、引き出しレイアウトアプリケーション（このアプリケーションはデフォルトで構築されているものです）内でクリック可能なタブをどのように利用できるかのデモンストレーションです。
+    \n\n第3ページは、スクロール可能な基本的なページを1つの段落だけでデモンストレーションしたものです。
+    \n\n第4ページは私が書式を記入する場所です。フォーム送信時に、ユーザーはページにリダイレクトされ、ユーザーが入力したフォーム入力値が表示されます。そこから、フォームまたはメインメニューページに戻ることができます。
+    \n\n 5番目のページは、JSONファイルから読み込んでリストの形式で出力する場所です（休日など、雇用主のテクニカルテストに恥知らずに使用しました）。ユーザーはボタンを押して、詳細を示すページにリダイレクトできます。
+    \n\nそれはこのアプリにあるすべてです。 APIの使用法、電話の原産国に応じてJSONのテキスト値を変換する、テキストの段落を正当化するなど、これ以上のことを追加する可能性があります。 </string>
+        <string name = "menu_3_page_content">これは、この特定のメニュー項目の基本的なテキスト段落です。この段落はオーバーフローしないので、このページにはScrollViewは必要ありません。</string>
+
+        <string name = "menu_4_name_text">名前：</string>
+        <string name = "menu_4_phone_text">電話：</string>
+        <string name = "menu_4_email_text">電子メール：</string>
+        <string name = "menu_4_button_text">フォームを送信する</string>
+        <string name = "form_name_is_empty"> *名前値が空です。</string>
+        <string name = "form_name_is_invalid"> *名前入力が無効です。</string>
+        <string name = "form_phone_is_empty"> *電話入力が空です。</string>
+        <string name = "form_phone_is_invalid"> *電話入力が無効です。</string>
+        <string name = "form_email_is_empty"> *電子メール入力が空です。</string>
+        <string name = "form_email_is_invalid"> *電子メール入力が無効です。</string>
+
+        <string name = "form_submitted_title">フォームが送信されました！</string>
+
+        <string name = "form_submit_page_message">あなたの名前はINSERTNAMEHEREです。電話番号はINSERTPHONEHEREです。あなたのメールアドレスはINSERTEMAILHEREです。</string>
+        <string name = "submit_another_form">別のフォームを送信する</string>
+
+        <string name = "hol_layout_date_string">開始日</string>
+        <string name = "full_details_tolist_button">リストに戻る</string>
+        <string name = "full_details_price_string">価格：</string>
+        <string name = "hol_full_details_button">詳細 </string>
+
+    <string name = "back_to_main_menu">メインメニューに戻る</string>
+</resources>
