@@ -14,18 +14,23 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class HolidaysAdapter extends ArrayAdapter {
     //Variable for the arraylist to store Holiday instances
     List list = new ArrayList();
     //The context of the parent (MenuPage5) page
     final private Context context;
+    //Variable for the current locale
+    String currentLocale;
 
-    public HolidaysAdapter(Context context, int resource) {
+    public HolidaysAdapter(Context context, int resource, String currentLocale) {
         //Call the constructor of the superclass(ArrayAdapter), passing it both the context and the resource
         super(context, resource);
         //Set the context of this instance as the one passed to the parameter
         this.context = context;
+        //Set the Locale String as the value passed to the parameter
+        this.currentLocale = currentLocale;
     }
 
     public void add(Holiday toInsert) {
@@ -49,46 +54,44 @@ public class HolidaysAdapter extends ArrayAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        //Local variable for the current row view, defined as the convertView passed to the parameter (whether null or not)
-        View row = convertView;
         //Instance of the HolidayHolder nested class
         HolidayHolder holder;
-        //If the row is null
-        if (row == null) {
+        //If the current row View is null
+        if (convertView == null) {
             //Get the layoutInflater of the current activity by getting this context's layout inflater service, casting it
             //...to the LayoutInflater class
-            LayoutInflater layoutInflater = (LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             //Redefine the row as an inflated instance of the holiday_layout XML from the layouts subdirectory in the
             //...res(resources) directory, using the parameter's parent(MenuPage5) as the view group
-            row = layoutInflater.inflate(R.layout.holiday_layout, parent, false);
+            convertView = layoutInflater.inflate(R.layout.holiday_layout, parent, false);
             //Define the holder as a new HolidayHolder instance
             holder = new HolidayHolder();
             //Define the HolidayHolder's name reference value as the "h_name" XML TextView in the inflated holder/holiday_layout row
-            holder.h_name = (TextView) row.findViewById(R.id.h_name);
+            holder.h_name = (TextView) convertView.findViewById(R.id.h_name);
             //Define the HolidayHolder's name reference value as the "h_name" XML TextView in the inflated holder/holiday_layout row
-            holder.h_city = (TextView) row.findViewById(R.id.h_city);
+            holder.h_city = (TextView) convertView.findViewById(R.id.h_city);
             //Define the HolidayHolder's name reference value as the "h_name" XML TextView in the inflated holder/holiday_layout row
-            holder.h_country = (TextView) row.findViewById(R.id.h_country);
+            holder.h_country = (TextView) convertView.findViewById(R.id.h_country);
             //Define the HolidayHolder's name reference value as the "h_name" XML TextView in the inflated holder/holiday_layout row
-            holder.h_price = (TextView) row.findViewById(R.id.h_price);
+            holder.h_price = (TextView) convertView.findViewById(R.id.h_price);
             //Define the HolidayHolder's name reference value as the "h_name" XML TextView in the inflated holder/holiday_layout row
-            holder.h_day = (TextView) row.findViewById(R.id.h_day);
+            holder.h_day = (TextView) convertView.findViewById(R.id.h_day);
             //Define the HolidayHolder's name reference value as the "h_name" XML TextView in the inflated holder/holiday_layout row
-            holder.h_month = (TextView) row.findViewById(R.id.h_month);
+            holder.h_month = (TextView) convertView.findViewById(R.id.h_month);
             //Define the HolidayHolder's name reference value as the "h_name" XML TextView in the inflated holder/holiday_layout row
-            holder.h_year = (TextView) row.findViewById(R.id.h_year);
+            holder.h_year = (TextView) convertView.findViewById(R.id.h_year);
             //Define the HolidayHolder's name reference value as the "h_name" XML ImageView in the inflated holder/holiday_layout row
-            holder.h_image = (ImageView) row.findViewById(R.id.h_image);
+            holder.h_image = (ImageView) convertView.findViewById(R.id.h_image);
             //Define the HolidayHolder's name reference value as the "h_name" XML TextView in the inflated holder/holiday_layout row
-            holder.h_details = (TextView) row.findViewById(R.id.h_details);
+            holder.h_details = (TextView) convertView.findViewById(R.id.h_details);
             //Define the HolidayHolder's name reference value as the "h_name" XML Button in the inflated holder/holiday_layout row
-            holder.h_button = (Button) row.findViewById(R.id.toFullDetails);
+            holder.h_button = (Button) convertView.findViewById(R.id.toFullDetails);
             //Set the unique tag Object of the row as the edited HolidayHolder
-            row.setTag(holder);
+            convertView.setTag(holder);
         } else {
             //Set the local HolidayHolder variable as the return value of the row's getTag, casted to the HolidayHolder class
             //Returns the HolidayHolder tagged to the row when the row was previously null
-            holder = (HolidayHolder) row.getTag();
+            holder = (HolidayHolder) convertView.getTag();
         }
         //Define a local Holiday instance as the return value of this instance's getItem function, which
         //...returns the item from the holidays ArrayList according to the position passed to the parameter
@@ -118,13 +121,8 @@ public class HolidaysAdapter extends ArrayAdapter {
         holder.h_city.setText(city);
         //Set the text of the holder's h_country TextView as the country String
         holder.h_country.setText(country);
-        //Set the text of the holder's h_price TextView as a £ String followed by a formatted price to limit
-        //...the number of decimal places to 2
-        holder.h_price.setText("£" + (String.format("%.2f", price)));
         //Set the text of the holder's h_day TextView as the day integer, converted to String
         holder.h_day.setText(Integer.toString(day));
-        //Set the text of the holder's h_month TextView as the month String
-        holder.h_month.setText(month);
         //Set the text of the holder's h_year TextView as the year integer, converted to String
         holder.h_year.setText(Integer.toString(year));
         //Set the source/URL of the holder's h_image reference by calling getResources().getIdentifier() to access the image file
@@ -135,21 +133,53 @@ public class HolidaysAdapter extends ArrayAdapter {
         holder.h_image.setImageResource(context.getResources().getIdentifier(holImage, "drawable", (context.getPackageName())));
         //Set the text of the holder's h_details TextView as the details String
         holder.h_details.setText(details);
+        //Set the text of the holder's h_month TextView as the month String
+        holder.h_month.setText(month);
+        //If the current device language is Danish, German, Spanish, French, Italian, Dutch or Portuguese
+        if (currentLocale.equals("de") || currentLocale.equals("es") || currentLocale.equals("fr")
+                || currentLocale.equals("it") || currentLocale.equals("nl") || currentLocale.equals("pt")
+                ) {
+            //Set the base Price value as the Euro symbol
+            holder.h_price.setText("€" + String.format("%.2f", price));
+        //If the current device language is Danish
+        } else if (currentLocale.equals("da")) {
+            //Set the base Price value as the Danish Krone symbol
+            holder.h_price.setText("kr" + String.format("%.2f", price));
+         //If neither language is found in the current Locale String
+        } else {
+            //If the current Locale is from either the US, Canada, Australia or New Zealand
+            if (currentLocale.equalsIgnoreCase("en_us") || currentLocale.equalsIgnoreCase("en_ca") || currentLocale.equalsIgnoreCase("en_au")
+            || currentLocale.equalsIgnoreCase("en_nz")){
+                //Set the base Price value as the Dollar
+                holder.h_price.setText("$" + String.format("%.2f", price));
+            } else {
+                //Set the base Price value as the British pound
+                holder.h_price.setText("£" + String.format("%.2f", price));
+            }
+        }
         //Set an OnClickListener to the holder's h_button Button reference
         holder.h_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Create a Bundle to store variables to pass to a new view
                 Bundle bundle = new Bundle();
-                //
+                //Insert a key/pair containing the hotel name and the tag value of "HotelName" into the bundle
                 bundle.putString("HotelName", hotelName);
+                //Insert a key/pair containing the hotel city and the tag value of "HotelName" into the bundle
                 bundle.putString("HotelCity", city);
+                //Insert a key/pair containing the hotel country and the tag value of "HotelName" into the bundle
                 bundle.putString("HotelCountry", country);
+                //Insert a key/pair containing the hotel price and the tag value of "HotelName" into the bundle
                 bundle.putDouble("HotelPrice", price);
+                //Insert a key/pair containing the day of the date and the tag value of "HotelName" into the bundle
                 bundle.putInt("HotelDay", day);
+                //Insert a key/pair containing the month of the date and the tag value of "HotelName" into the bundle
                 bundle.putString("HotelMonth", month);
+                //Insert a key/pair containing the year of the date and the tag value of "HotelName" into the bundle
                 bundle.putInt("HotelYear", year);
+                //Insert a key/pair containing the hotel image and the tag value of "HotelName" into the bundle
                 bundle.putString("HotelImage", holImage);
+                //Insert a key/pair containing the hotel details and the tag value of "HotelName" into the bundle
                 bundle.putString("HotelDetails", details);
                 //Define a FragmentTransaction, in which the (casted to FragmentActivity) context's SupportFragmentManager
                 //...will begin a transaction which will allow the replacement of the current view as well as attachment
@@ -166,8 +196,10 @@ public class HolidaysAdapter extends ArrayAdapter {
                 transact.commit();
             }
         });
+        //Refresh this adapter by calling it's notifyDataSetChanged method
+        notifyDataSetChanged();
         //Return the inflated and edited row
-        return row;
+        return convertView;
     }
 
     static class HolidayHolder {
