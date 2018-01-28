@@ -125,7 +125,7 @@ public class HolidayFullDetails extends Fragment {
                 || currentLocale.getLanguage().toString().equals("fr") || currentLocale.getLanguage().toString().equals("it")
                 || currentLocale.getLanguage().toString().equals("nl") || currentLocale.getLanguage().toString().equals("pt")
                 || currentLocale.getLanguage().toString().equals("ru") || currentLocale.getLanguage().toString().equals("da")
-                || currentLocale.getLanguage().toString().equals("da")) {
+                || currentLocale.getLanguage().toString().equals("zh")) {
             //(Temporary) Set the text of the month TextView as the api_loading_text String object by passing it the....
             //...unique ID pointint to it in the res/resources>strings directory
             fdMonth.setText(getResources().getString(R.string.api_loading_text));
@@ -256,7 +256,7 @@ public class HolidayFullDetails extends Fragment {
                 @Override
                 public void onFinishResponse(Object returnVal) {
                     //Set the text of the price TextView as the return value of the AsyncTask's onPostExecute function
-                    fdPrice.setText("¥" + String.format("%.2f", returnVal));
+                    fdPrice.setText("￥" + String.format("%.2f", returnVal));
                 }
             });
             //If the current Android software version is greater than/equal to Honeycomb
