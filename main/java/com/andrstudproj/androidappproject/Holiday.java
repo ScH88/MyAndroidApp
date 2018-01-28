@@ -53,10 +53,10 @@ public class Holiday {
         this.day = day;
         //Set this instance's year value by passing it the "year" value passed to the parameter
         this.year = year;
-        //If the current device language is Danish, German, Spanish, French, Italian, Dutch, or Portugese
+        //If the current device language is Danish, German, Spanish, French, Italian, Dutch, Portugese, Russian or Chinese
         if (currentLocale.equals("de") || currentLocale.equals("es") || currentLocale.equals("fr")
                 || currentLocale.equals("it") || currentLocale.equals("nl") || currentLocale.equals("pt")
-                || currentLocale.equals("da")) {
+                || currentLocale.equals("da")) || currentLocale.equals("ru") || currentLocale.equals("zh") {
             //Create a new instance of the GetDetailsXML AsyncTask class, passing it an instance of the CallbackListener...
             //...interface class, which will set the text of the details TextView
             GetDetailsXML translateDetails = new GetDetailsXML(new CallbackListener() {
