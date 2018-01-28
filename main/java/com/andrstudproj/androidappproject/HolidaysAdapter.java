@@ -141,10 +141,18 @@ public class HolidaysAdapter extends ArrayAdapter {
                 ) {
             //Set the base Price value as the Euro symbol
             holder.h_price.setText("€" + String.format("%.2f", price));
+        //If the current device language is Russian
+        } else if (currentLocale.equals("ru")) {
+            //Set the base Price value as the Russian Ruble symbol
+            holder.h_price.setText("\u20BD" + String.format("%.2f", price));
         //If the current device language is Danish
         } else if (currentLocale.equals("da")) {
             //Set the base Price value as the Danish Krone symbol
             holder.h_price.setText("kr" + String.format("%.2f", price));
+        //If the current device language is Chinese    
+        } else if (currentLocale.equals("zh")) {
+            //Set the base Price value as the Chinese Yuan symbol
+            holder.h_price.setText("￥" + String.format("%.2f", price));
          //If neither language is found in the current Locale String
         } else {
             //If the current Locale is from either the US, Canada, Australia or New Zealand
