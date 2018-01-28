@@ -141,6 +141,50 @@ public class Holiday {
                 //...and the appropriate three letter currency zone to convert to
                 translatePrice.execute(price, "DKK");
             }
+            //Otherwise, if the current locale language is "ru" (Russian)
+        } else if (currentLocale.equals("ru")) {
+            //Create a new instance of the TranslatePrice AsyncTask class, passing it an instance of the CallbackListener...
+            //...interface class, which will set the text of the price TextView
+            TranslatePrice translatePrice = new TranslatePrice(new CallbackListener() {
+                //Override onFinishResponse
+                @Override
+                public void onFinishResponse(Object returnVal) {
+                    //Call the setPrice method using the return value of the AsyncTask's onPostExecute method
+                    setPrice((double) returnVal);
+                }
+            });
+            //If the current Android software version is greater than/equal to Honeycomb
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                //Call the translatePrice AsyncTask's executeOnExecutor/doInBackground, passing it the hotel's price...
+                //...and the appropriate three letter currency zone to convert to
+                translatePrice.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, price, "RUB");
+            } else {
+                //Call the translatePrice AsyncTask's execute/doInBackground method, passing it the hotel price...
+                //...and the appropriate three letter currency zone to convert to
+                translatePrice.execute(price, "RUB");
+            }
+            //Otherwise, if the current locale language is "zh" (Chinese)
+        } else if (currentLocale.equals("zh")) {
+            //Create a new instance of the TranslatePrice AsyncTask class, passing it an instance of the CallbackListener...
+            //...interface class, which will set the text of the price TextView
+            TranslatePrice translatePrice = new TranslatePrice(new CallbackListener() {
+                //Override onFinishResponse
+                @Override
+                public void onFinishResponse(Object returnVal) {
+                    //Call the setPrice method using the return value of the AsyncTask's onPostExecute method
+                    setPrice((double) returnVal);
+                }
+            });
+            //If the current Android software version is greater than/equal to Honeycomb
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                //Call the translatePrice AsyncTask's executeOnExecutor/doInBackground, passing it the hotel's price...
+                //...and the appropriate three letter currency zone to convert to
+                translatePrice.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, price, "CNY");
+            } else {
+                //Call the translatePrice AsyncTask's execute/doInBackground method, passing it the hotel price...
+                //...and the appropriate three letter currency zone to convert to
+                translatePrice.execute(price, "CNY");
+            }
         } else {
             //Create a new instance of the TranslatePrice AsyncTask class, passing it an instance of the CallbackListener...
             //...interface class, which will set the text of the price TextView
