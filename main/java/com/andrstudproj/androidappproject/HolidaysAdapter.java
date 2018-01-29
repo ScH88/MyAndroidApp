@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class HolidaysAdapter extends ArrayAdapter {
     //Variable for the arraylist to store Holiday instances
@@ -141,7 +140,7 @@ public class HolidaysAdapter extends ArrayAdapter {
                 ) {
             //Set the base Price value as the Euro symbol
             holder.h_price.setText("€" + String.format("%.2f", price));
-        //If the current device language is Russian
+            //If the current device language is Russian
         } else if (currentLocale.equals("ru")) {
             //Set the base Price value as the Russian Ruble symbol
             holder.h_price.setText("\u20BD" + String.format("%.2f", price));
@@ -149,21 +148,19 @@ public class HolidaysAdapter extends ArrayAdapter {
         } else if (currentLocale.equals("da")) {
             //Set the base Price value as the Danish Krone symbol
             holder.h_price.setText("kr" + String.format("%.2f", price));
-        //If the current device language is Chinese    
+            //If the current device language is Chinese
         } else if (currentLocale.equals("zh")) {
             //Set the base Price value as the Chinese Yuan symbol
             holder.h_price.setText("￥" + String.format("%.2f", price));
-         //If neither language is found in the current Locale String
-        } else {
-            //If the current Locale is from either the US, Canada, Australia or New Zealand
-            if (currentLocale.equalsIgnoreCase("en_us") || currentLocale.equalsIgnoreCase("en_ca") || currentLocale.equalsIgnoreCase("en_au")
-            || currentLocale.equalsIgnoreCase("en_nz")){
+         //If the Locale string is either American, Canadian, Australian or New Zealand
+        } else if (currentLocale.equalsIgnoreCase("en_us") || currentLocale.equalsIgnoreCase("en_ca") || currentLocale.equalsIgnoreCase("en_au")
+                || currentLocale.equalsIgnoreCase("en_nz")){
                 //Set the base Price value as the Dollar
                 holder.h_price.setText("$" + String.format("%.2f", price));
-            } else {
-                //Set the base Price value as the British pound
-                holder.h_price.setText("£" + String.format("%.2f", price));
-            }
+        //Otherwise
+        } else {
+            //Set the base Price value as the British pound
+            holder.h_price.setText("£" + String.format("%.2f", price));
         }
         //Set an OnClickListener to the holder's h_button Button reference
         holder.h_button.setOnClickListener(new View.OnClickListener() {
