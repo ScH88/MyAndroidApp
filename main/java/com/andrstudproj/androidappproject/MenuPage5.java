@@ -1,23 +1,32 @@
 package com.andrstudproj.androidappproject;
 
+import android.content.res.XmlResourceParser;
+import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
 
+import java.io.IOException;
 import java.io.InputStream;
-import java.util.Scanner;
+import java.io.Reader;
+import java.util.ArrayList;
+import java.util.Locale;
 
 public class MenuPage5 extends Fragment {
     //ListView for displaying a list of holidays
     ListView listView;
+    //Variable for the current locale
+    Locale currentLocale;
     //Instance of HolidaysAdapter to insert Holiday instances/layouts in the ListView
     HolidaysAdapter holidaysAdapter;
     @Nullable
@@ -28,11 +37,21 @@ public class MenuPage5 extends Fragment {
         //Set up this instance's list view as the listOfHolidays ListView in the menu_page_5_fragment xml in the layouts
         //...subdirectory in res(resources)
         listView = (ListView) view.findViewById(R.id.listOfHolidays);
+        //If the device's Android software version is larger than/equal to Nougat
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
+            //Set the current Locale this way
+            currentLocale = getResources().getConfiguration().getLocales().get(0);
+            //Otherwise
+        } else{
+            //Set the current Locale this way, as this version was deprecated following the introduction of Nougat
+            currentLocale = getResources().getConfiguration().locale;
+        }
         //Set up this instance's holidaysAdapter as a new instance, passing it this instance's context and the holiday_layout
         //...from the layout subdirectory in res(resources)
-        holidaysAdapter = new HolidaysAdapter(MenuPage5.this.getContext(), R.layout.holiday_layout);
+        holidaysAdapter = new HolidaysAdapter(MenuPage5.this.getContext(), R.layout.holiday_layout, currentLocale.getLanguage().toString());
+        //holidaysAdapter = new HolidaysAdapter(getActivity().getApplicationContext(), R.layout.holiday_layout, currentLocale.getLanguage().toString());
         //Set the list view's adapter as the holidaysAdapter, allowing all holidays to be listed
-        listView.setAdapter(holidaysAdapter);
+        //listView.setAdapter(holidaysAdapter);
         //Return the inflated and edited view
         return view;
     }
@@ -41,63 +60,144 @@ public class MenuPage5 extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         //Call the constructor of the superclass(Fragment)
         super.onViewCreated(view, savedInstanceState);
-        //Create an inputStream, which will read the "holidays" JSON file in the "raw" subdirectory in res(resources)
-        InputStream inputStream = getResources().openRawResource(R.raw.holidays);
-        //Create a scanner, which will utilise the inputstream
-        Scanner scanner = new Scanner(inputStream);
-        //Create a stringbuilder, which will write Strings
-        StringBuilder builder = new StringBuilder();
-        //While the scanner can make out a next line
-        while (scanner.hasNextLine()){
-            //Append the next line to the String builder
-            builder.append(scanner.nextLine());
-        }
-        //Try statement
+        //
         try {
-            //Define a root scope from the JSON file as a JSONObject
-            JSONObject root = new JSONObject(builder.toString());
-            //Define a list of holidays as a JSONArray, retrieving from the root scope the array titled "holidays"
-            JSONArray holidays = root.getJSONArray("holidays");
-            //For each entry in the holidays JSONArray
-            for (int i = 0; i < holidays.length(); i++) {
-                //Get the current holiday from the JSONArray by calling the getJSONObject function
-                //...which returns the current JSONObject according to the current index passed to it
-                JSONObject currentHol = holidays.getJSONObject(i);
-                //Define an int for the unique id by getting the integer titled "id" from the current JSONObject
-                int id = currentHol.getInt("id");
-                //Define a String for the hotel name by getting the String titled "hotelName" from the current JSONObject
-                String hotelName = currentHol.getString("hotelName");
-                //Define a String for the hotel's country by getting the String titled "city"
-                //...from the "location" sub-array from the current JSONObject
-                String city = currentHol.getJSONObject("location").getString("city");
-                //Define a String for the hotel's country by getting the String titled "country"
-                //...from the "location" sub-array from the current JSONObject
-                String country = currentHol.getJSONObject("location").getString("country");
-                //Define a Double for the hotel price by getting the Double titled "price" from the current JSONObject
-                Double price = currentHol.getDouble("price");
-                //Define a String for the hotel's image's title by getting the String titled "image" from the current JSONObject
-                String image = currentHol.getString("image");
-                //Define an int for the hotel starting day by getting the integer titled "day"
-                //...from the "startDate" sub-array from the current JSONObject
-                int day = currentHol.getJSONObject("startDate").getInt("day");
-                //Define a String for the hotel's starting month by getting the String titled "month"
-                //...from the "startDate" sub-array from the current JSONObject
-                String month = currentHol.getJSONObject("startDate").getString("month");
-                //Define an int for the hotel starting year by getting the integer titled "year"
-                //...from the "startDate" sub-array from the current JSONObject
-                int year = currentHol.getJSONObject("startDate").getInt("year");
-                //Define a String for the hotel details by getting the String titled "details" from the current JSONObject
-                String details = currentHol.getString("details");
-                //Create a Holiday instance by passing all local variables gathered from the current JSONObject
-                Holiday toInsert = new Holiday(id, hotelName, city, country, price, image,
-                        day, month, year, details);
-                //Add the Holiday instance to the HolidaysAdapter, which will insert to the ListView
-                holidaysAdapter.add(toInsert);
+            /*
+            * Alternate XmlPullParser Setup - Commented out
+            */
+            //Set up an InputStream by calling the getResources method, then the openRawResource method to get...
+            //... the "holidays" xml file from the raw directory in the resources/res section
+            //InputStream inputStream = getResources().openRawResource(R.raw.holidays);
+            //Create a new instance of XmlPullParserFactory
+            //XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+            //Call setNameSpaceAware(pass true boolean) to ensure XmlPullParsers generated by the factory will...
+            //...have support for Xml namespaces
+            //factory.setNamespaceAware(true);
+            //Create a new XmlPullParser from the factory and name it "xpp"
+            //XmlPullParser xpp = factory.newPullParser();
+            //Set the input of the XmlPullParser as the InputStream associated with the "holidays" xml file in the raw folder
+            //xpp.setInput(inputStream, null);
+            /*
+             * XmlPullParser Setup
+             */
+            //Create an XmlPullParser by calling getResources, then getXMl(passing it the unique int ID for the "Holidays"...
+            //...xml file in the XML subdirectory under res/resources. Name the XmlPullParser "xpp"
+            XmlPullParser xpp = getResources().getXml(R.xml.holidays);
+            //Strings for the current (starting) tag being read and the current hotel name, city, country, image, month and details
+            String currentTag = "", hotelName = "", city = "", country = "", image = "", month = "", details = "";
+            //Integers for the holiday's unique ID, start day and start year
+            int id = 0, day = 0, year = 0;
+            //Double for the hotel price
+            Double price = 0.0;
+            //Integer pointing for the current tag/content type the XmlPullParser is on, with a value of the first/current...
+            //...event on startup. Events are all ints, each one pointing to a specific event type in the XmlPullParser class.
+            int currentEvent = xpp.getEventType();
+            //Boolean for if the XmlPullParser is reading between "holiday" tags
+            boolean isOnHoliday = false;
+            //While the current event does not meet any of the following conditions
+            //1 - The current evetn is an end tag
+            //2 - The current tag name does not equal null
+            //3 - The current tag name equals holidays
+            while (!(currentEvent == xpp.END_TAG && xpp.getName() != null && xpp.getName().equals("holidays"))) {
+                //Create a switch statement centering the value of the current event
+                switch(currentEvent) {
+                    //If the current event is a starting tag
+                    case XmlPullParser.START_TAG:
+                        //Set the current Tag String value as the name of the tag the XmlPullParser is reading
+                        currentTag = xpp.getName();
+                    //If the current event is the text content between tags
+                    case XmlPullParser.TEXT:
+                        //If the current text being read by the XmlPullParser is not null (as XmlPullParser also reads the...
+                        //...whitespace preceding starting tags on each new line
+                        if (xpp.getText() != null) {
+                            //If the currentTag string equals "id" (reading between the "id" tags)
+                            if (currentTag.equalsIgnoreCase("id")) {
+                                //Get text being read by the XmlPullParser, then pass it to Integer.parseInt to convert from...
+                                //String to Integer, then set the id value as this
+                                id = Integer.parseInt(xpp.getText());
+                                //If the currentTag string equals "hotelName" (reading between the "hotelName" tags)
+                            } else if (currentTag.equalsIgnoreCase("hotelName")) {
+                                //Set the current hotelName value as the entirety of the text being read by the XmlPullParser
+                                hotelName = xpp.getText();
+                                //If the currentTag string equals "city" (reading between the "city" tags)
+                            } else if (currentTag.equalsIgnoreCase("city")) {
+                                //Set the current city value as the entirety of the text being read by the XmlPullParser
+                                city = xpp.getText();
+                                //If the currentTag string equals "country" (reading between the "country" tags)
+                            } else if (currentTag.equalsIgnoreCase("country")) {
+                                //Set the current country value as the entirety of the text being read by the XmlPullParser
+                                country = xpp.getText();
+                                //If the currentTag string equals "price" (reading between the "price" tags)
+                            } else if (currentTag.equalsIgnoreCase("price")) {
+                                //Get text being read by the XmlPullParser, then pass it to Double.parseDouble to convert from...
+                                //String to Double, then set the day value as this
+                                price = Double.parseDouble(xpp.getText());
+                                //If the currentTag string equals "image" (reading between the "image" tags)
+                            } else if (currentTag.equalsIgnoreCase("image")) {
+                                //Set the current image value as the entirety of the text being read by the XmlPullParser
+                                image = xpp.getText();
+                                //If the currentTag string equals "day" (reading between the "day" tags)
+                            } else if (currentTag.equalsIgnoreCase("day")) {
+                                //Get text being read by the XmlPullParser, then pass it to Integer.parseInt to convert from...
+                                //String to Integer, then set the day value as this
+                                day = Integer.parseInt(xpp.getText());
+                                //If the currentTag string equals "month" (reading between the "month" tags)
+                            } else if (currentTag.equalsIgnoreCase("month")) {
+                                //Set the current month value as the entirety of the text being read by the XmlPullParser
+                                month = xpp.getText();
+                                //If the currentTag string equals "year" (reading between the "year" tags)
+                            } else if (currentTag.equalsIgnoreCase("year")) {
+                                //Get text being read by the XmlPullParser, then pass it to Integer.parseInt to convert from...
+                                //String to Integer, then set the year value as this
+                                year = Integer.parseInt(xpp.getText());
+                                //If the currentTag string equals "details" (reading between the "details" tags)
+                            } else if (currentTag.equalsIgnoreCase("details")) {
+                                //Set the current details value as the entirety of the text being read by the XmlPullParser
+                                details = xpp.getText();
+                            }
+                            //Reset the current Starting tag String, so the parser does not pass newline whitespace...
+                            //...in the above if/else statement and cause a crash
+                            currentTag = "";
+                        }
+                    //If the current XmlPullParser event is that of an ending tag
+                    case XmlPullParser.END_TAG:
+                        //If the name of the current tag is not null
+                        if (xpp.getName() != null) {
+                            //If the name of the current tag equals "holiday"
+                            if (xpp.getName().equals("holiday")) {
+                                //If the isOnHoliday boolean is false (if not between "holiday" tags
+                                if (isOnHoliday == false) {
+                                    //Set the isOnHoliday boolean to true,
+                                    isOnHoliday = true;
+                                //If the isOnHoliday boolean is true (if between "holiday" tags)
+                                } else if (isOnHoliday == true) {
+                                    //Create a new Holiday instance, passing it the id, the current Locale and the other...
+                                    //....current states of the local hotel values
+                                    Holiday holiday = new Holiday(id, currentLocale.getLanguage().toString(), hotelName,
+                                            city, country, price, image, day, month, year, details);
+                                    //Add the new holiday to the holidaysAdapter, which will add it to it's ArrayList
+                                    holidaysAdapter.add(holiday);
+                                    //Set the isOnHoliday boolean to false
+                                    isOnHoliday = false;
+                                }
+                            }
+                        }
+                }
+                //Define the currentEvent int as the next token, which is either a tag or content between tags
+                currentEvent = xpp.nextToken();
             }
-            //If a JSONException is caught
-        } catch (JSONException e) {
-            //Print the stackTrace of the exception
+        //If an XmlPullParserException is caught
+        } catch (XmlPullParserException e) {
+            //Print the stack trace of the exception
+            e.printStackTrace();
+            //If an IOException is caught
+        } catch (IOException e) {
+            //Print the stack trace of the exception
             e.printStackTrace();
         }
+        //Refresh the holidaysAdapter by calling it's notifyDataSetChanged method
+        holidaysAdapter.notifyDataSetChanged();
+        //Set the list view's adapter as the holidaysAdapter, allowing all holidays to be listed
+        listView.setAdapter(holidaysAdapter);
     }
 }
