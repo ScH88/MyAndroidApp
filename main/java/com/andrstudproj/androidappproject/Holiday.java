@@ -53,54 +53,10 @@ public class Holiday {
         this.day = day;
         //Set this instance's year value by passing it the "year" value passed to the parameter
         this.year = year;
-        //If the current device language is Danish, German, Spanish, French, Italian, Dutch, Portugese, Russian or Chinese
-        if (currentLocale.equals("de") || currentLocale.equals("es") || currentLocale.equals("fr")
-                || currentLocale.equals("it") || currentLocale.equals("nl") || currentLocale.equals("pt")
-                || currentLocale.equals("da") || currentLocale.equals("ru") || currentLocale.equals("zh")) {
-            //Create a new instance of the GetDetailsXML AsyncTask class, passing it an instance of the CallbackListener...
-            //...interface class, which will set the text of the details TextView
-            GetDetailsXML translateDetails = new GetDetailsXML(new CallbackListener() {
-                //Override onFinishResponse
-                @Override
-                public void onFinishResponse(Object returnVal) {
-                    //Call the setDetails method using the return value of the AsyncTask's onPostExecute method
-                    setDetails((String)returnVal);
-                }
-            });
-            //Create a new instance of the GetMonthXML AsyncTask class, passing it an instance of the CallbackListener...
-            //...interface class, which will set the text of the month TextView
-            GetMonthXML translateMonth = new GetMonthXML(new CallbackListener() {
-                //Override onFinishResponse
-                @Override
-                public void onFinishResponse(Object returnVal) {
-                    //Call the setMonth method using the return value of the AsyncTask's onPostExecute method
-                    setMonth((String)returnVal);
-                }
-            });
-            //If the current Android software version is greater than/equal to Honeycomb
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                //Call the translateDetails AsyncTask's executeOnExecutor/doInBackground, the former allowing it and the...
-                //...other AsyncTasks to execute in unison.
-                //Pass the hotelDetails and the current locale's language
-                //NOTE: retrieving value from the internet must be done through an AsyncTask class, as doing this...
-                //...through this class results in a MainThreadException
-                translateDetails.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, details, currentLocale);
-                //Call the translateMonth AsyncTask's executeOnExecutor/doInBackground, passing it the hotel's month...
-                //...and the current locale
-                translateMonth.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, month, currentLocale);
-            } else {
-                //Call the translateDetails AsyncTask's execute/doInBackground method, passing it the hotel details
-                translateDetails.execute(details);
-                //Call the translateMonth AsyncTask's execute/doInBackground method, passing it the hotel month
-                translateMonth.execute(month);
-            }
-        //Otherwise
-        } else {
-            //Set the month of this instance as the month passed to the parameter
-            this.month = month;
-            //Set the details of this instance as the details passed to the parameter
-            this.details = details;
-        }
+        //Set the month of this instance as the month passed to the parameter
+        this.month = month;
+        //Set the details of this instance as the details passed to the parameter
+        this.details = details;
         //If the current device language is Danish, German, Spanish, French, Italian, Dutch, Portugese, Russian or Chinese
         if (currentLocale.equals("de") || currentLocale.equals("es") || currentLocale.equals("fr")
                 || currentLocale.equals("it") || currentLocale.equals("nl") || currentLocale.equals("pt")
