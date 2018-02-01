@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<holidays>
+<holiday>
+    <id>1</id>
+    <hotelName>Costa Adeje Gran Гостиница</hotelName>
+    <city>Costa Adeje</city>
+    <country>Тенерифе</country>
+    <price>1136.5</price>
+    <image>image_01</image>
+    <day>3</day>
+    <month>июль</month>
+    <year>2014</year>
+    <details>Вершина роскошного роскошного курорта с бассейном, местами для отдыха, ночными развлечениями, ежедневным завтраком и многое другое.</details>
+</holiday>
+<holiday>
+<id>2</id>
+<hotelName>Гольф-отель и апартаменты Агуамарины</hotelName>
+    <city>Costa Adeje</city>
+    <country>Тенерифе</country>
+    <price>499.99</price>
+    <image>image_02</image>
+    <day>3</day>
+    <month>июль</month>
+    <year>2014</year>
+    <details>Популярный недорогой курорт. Это главная площадка - это поле для гольфа с разными типами для взрослых и детей. Также спортивный красивый вид на побережье для более высоких квартир.</details>
+</holiday>
+<holiday>
+<id>3</id>
+<hotelName>Парк Лагуна II</hotelName>
+    <city>Costa Adeje</city>
+    <country>Тенерифе</country>
+<price>696.8</price>
+<image>image_03</image>
+    <day>27</day>
+    <month>май</month>
+    <year>2014</year>
+<details>Хороший, недорогой отель, расположенный недалеко от центра города Тенерифе. Из отеля открывается прекрасный вид на близлежащее озеро.</details>
+</holiday>
+</holidays>
