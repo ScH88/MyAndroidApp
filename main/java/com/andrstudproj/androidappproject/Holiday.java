@@ -94,11 +94,17 @@ public class Holiday {
                 //Call the translateMonth AsyncTask's execute/doInBackground method, passing it the hotel month
                 translateMonth.execute(month);
             }
+        //Otherwise
+        } else {
+            //Set the month of this instance as the month passed to the parameter
+            this.month = month;
+            //Set the details of this instance as the details passed to the parameter
+            this.details = details;
         }
         //If the current device language is Danish, German, Spanish, French, Italian, Dutch, Portugese, Russian or Chinese
         if (currentLocale.equals("de") || currentLocale.equals("es") || currentLocale.equals("fr")
                 || currentLocale.equals("it") || currentLocale.equals("nl") || currentLocale.equals("pt")
-                ) {
+                || currentLocale.equals("da") || currentLocale.equals("ru") || currentLocale.equals("zh")) {
             //Create a new instance of the TranslatePrice AsyncTask class, passing it an instance of the CallbackListener...
             //...interface class, which will set the text of the price TextView
             TranslatePrice translatePrice = new TranslatePrice(new CallbackListener() {
@@ -185,7 +191,9 @@ public class Holiday {
                 //...and the appropriate three letter currency zone to convert to
                 translatePrice.execute(price, "CNY");
             }
-        } else {
+         //If the current Locale is American, Australian, Canadian or New Zealand
+        } else if (currentLocale.equalsIgnoreCase("en_us") || currentLocale.equalsIgnoreCase("en_au") ||
+                currentLocale.equalsIgnoreCase("en_ca") || currentLocale.equalsIgnoreCase("en_nz")){
             //Create a new instance of the TranslatePrice AsyncTask class, passing it an instance of the CallbackListener...
             //...interface class, which will set the text of the price TextView
             TranslatePrice translatePrice = new TranslatePrice(new CallbackListener() {
@@ -217,6 +225,10 @@ public class Holiday {
                 // and the appropriate three letter currency zone to convert to, then call it's execute/doInBackground
                 translatePrice.execute(price, "NZD");
             }
+        //Otherwise
+        } else {
+            //Just set this instance's price as the price value passed to the parameter
+            this.price = price;
         }
     }
 
