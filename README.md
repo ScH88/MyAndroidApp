@@ -16,6 +16,4 @@ I've also had to omit the Arabic Strings XML files, because the API the program 
 
 As it stands, the HolidayFullDetails page works fine. The big problem I am having is that the Menu 5 page is having trouble showing the translations as intended. As expected, each row should show the translated values each upon loading, but they do not show unless I scroll down and up, for some weird reason (and even then, they can disappear spontaneously). If I click the "full details" button when the values are not loaded, the program crashes with a NullPointerException.
 
-And even then, when I click the "full details" button, sometimes the "details" field show a limited portion of the details value passed over via bundle.
-
 If you are reading this, I could really, REALLY do with some help here.
