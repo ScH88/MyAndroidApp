@@ -57,9 +57,9 @@ public class Holiday {
         if (currentLocale.equals("de") || currentLocale.equals("es") || currentLocale.equals("fr")
                 || currentLocale.equals("it") || currentLocale.equals("nl") || currentLocale.equals("pt")
                 || currentLocale.equals("da")) || currentLocale.equals("ru") || currentLocale.equals("zh") {
-            //Create a new instance of the GetDetailsXML AsyncTask class, passing it an instance of the CallbackListener...
+            //Create a new instance of the TranslateStringXML AsyncTask class, passing it an instance of the CallbackListener...
             //...interface class, which will set the text of the details TextView
-            GetDetailsXML translateDetails = new GetDetailsXML(new CallbackListener() {
+            TranslateStringXML translateDetails = new TranslateStringXML(new CallbackListener() {
                 //Override onFinishResponse
                 @Override
                 public void onFinishResponse(Object returnVal) {
@@ -69,7 +69,7 @@ public class Holiday {
             });
             //Create a new instance of the GetMonthXML AsyncTask class, passing it an instance of the CallbackListener...
             //...interface class, which will set the text of the month TextView
-            GetMonthXML translateMonth = new GetMonthXML(new CallbackListener() {
+            TranslateStringXML translateMonth = new TranslateStringXML(new CallbackListener() {
                 //Override onFinishResponse
                 @Override
                 public void onFinishResponse(Object returnVal) {
