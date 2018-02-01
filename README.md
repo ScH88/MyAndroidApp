@@ -6,9 +6,7 @@ All files here were extracted from my "AndroidAppProject" base project file > ap
 
 Background Image: http://www.myfreetextures.com/wp-content/uploads/2011/06/brushedmetal103.jpg
 
-Current branches -
-
-BRANCH 1: "Branch #1 - Attempt at Translating ArrayAdapter" 
+CURRENT BRANCH DETAILS - "Attempt at Translating ArrayAdapter" 
 
 What the title implies is that for each Holiday object in Menu 5's ArrayAdapter, there are internal calls to classes to translate the Month, Details and Price values. Said new classes added, which extend AsyncTask, use online APIs to translate the values passed over from each Holiday, as well as the HolidayFullDetails page. 
 
