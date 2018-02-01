@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<holidays>
+<holiday>
+    <id>1</id>
+    <hotelName>Costa Adeje Gran Hotel</hotelName>
+        <city>Costa Adeje</city>
+        <country>Teneriffa</country>
+    <price>1136.5</price>
+    <image>image_01</image>
+        <day>3</day>
+        <month>Juli</month>
+        <year>2014</year>
+    <details>Top of the line luksus resort med swimmingpool, rekreative faciliteter, natlige underholdning, daglig morgenmad og mere.</details>
+</holiday>
+<holiday>
+<id>2</id>
+<hotelName>Aguamarina Golf Hotel and Apartments</hotelName>
+    <city>Costa Adeje</city>
+    <country>Teneriffa</country>
+<price>499.99</price>
+<image>image_02</image>
+    <day>3</day>
+    <month>Juli</month>
+    <year>2014</year>
+<details>Ein beliebter Low-Cost-Resort. Es ist Hauptattraktion ist der Golfplatz, mit verschiedenen Arten für Erwachsene und Kinder. Auch Sport einen schönen Blick auf die Küste für höhere Wohnungen.</details>
+</holiday>
+<holiday>
+<id>3</id>
+<hotelName>Laguna Park II</hotelName>
+<location>
+    <city>Costa Adeje</city>
+    <country>Teneriffa</country>
+</location>
+<price>696.8</price>
+<image>image_03</image>
+    <day>27</day>
+    <month>Mai</month>
+    <year>2014</year>
+<details>Ein nettes, erschwingliches Hotel, nicht weit vom Stadtzentrum von Teneriffa entfernt. Bietet einen schönen Blick auf einen nahe gelegenen See.</details>
+</holiday>
+</holidays>
